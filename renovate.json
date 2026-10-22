@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["github>doodlescheduling/renovate"],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Update versions pinned via '# renovate:' comments in the Dockerfile",
+      "managerFilePatterns": ["/(^|/)Dockerfile$/"],
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)\\s+ARG \\S+=(?<currentValue>\\S+)"
+      ]
+    }
+  ]
+}
