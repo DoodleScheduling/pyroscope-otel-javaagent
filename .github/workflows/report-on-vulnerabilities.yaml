@@ -21,7 +21,7 @@ jobs:
     - name: Scan for vulnerabilities
       uses: aquasecurity/trivy-action@8f28faec26515256b6d22074d1d2a8986f4cbd87 # 0.36.0
       with: 
-        image-ref: ghcr.io/doodlescheduling/growthbook-controller:latest
+        image-ref: ghcr.io/doodlescheduling/pyroscope-otel-javaagent:latest
         format: json
         scanners: vuln,secret
         ignore-unfixed: false
